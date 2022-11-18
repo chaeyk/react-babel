@@ -1,5 +1,7 @@
 // webpack.config.js
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: './src/index.tsx',
   output: {
@@ -25,4 +27,11 @@ module.exports = {
   resolve: {
     extensions: ['.jsx', '.js', '.tsx', '.ts'],
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public' }
+      ],
+    }),
+  ],
 }
