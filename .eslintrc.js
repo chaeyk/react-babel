@@ -1,8 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    'plugin:prettier/recommended',
-  ],
+  extends: ['plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   overrides: [
@@ -11,7 +9,7 @@ module.exports = {
       parserOptions: {
         project: ['./tsconfig.json', 'electron/tsconfig.json'], // Specify it only for TypeScript files
       },
-      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
+      files: ['*.ts', '*.tsx'],
       rules: {
         '@typescript-eslint/no-shadow': ['error'],
         'no-shadow': 'off',
